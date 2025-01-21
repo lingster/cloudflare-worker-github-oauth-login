@@ -2,11 +2,14 @@ addEventListener("fetch", (event) => {
   event.respondWith(handle(event.request));
 });
 
-// use secrets
-const client_id = CLIENT_ID;
-const client_secret = CLIENT_SECRET;
 
-async function handle(request) {
+async function handle(request, env) {
+  // use secrets
+  const client_id = env.CLIENT_ID;
+  const client_secret = env.CLIENT_SECRET;
+
+  console.log(`Handling request ${client_id}`)
+
   // handle CORS pre-flight request
   if (request.method === "OPTIONS") {
     return new Response(null, {
