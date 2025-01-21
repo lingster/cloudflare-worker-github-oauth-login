@@ -61,7 +61,8 @@ async function handle(request: Request, env: Env) {
     if (result.error) {
       return new Response(JSON.stringify(result), { status: 401, headers })
     }
-    
+
+    console.log(`oauth access: ${result.access_token}`)
     return new Response(JSON.stringify({ token: result.access_token }), {
       status: 201,
       headers,
