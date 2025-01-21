@@ -9,6 +9,7 @@ zone_id = ""
 [
 vars
 ]
+TEST = "test var"
 # Development variables here
 # CLIENT_ID = "your-dev-client-id"
 
