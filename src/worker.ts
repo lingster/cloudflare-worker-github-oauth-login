@@ -76,5 +76,4 @@ async function handle(request: Request, env: Env) {
       }
     })
   }
-:w
 }
