@@ -1,6 +1,18 @@
 name = "github-oauth-login"
-type = "javascript"
+main = "src/worker.ts"
+#type = "javascript"
 account_id = "bc2043c616d427139c181d21fc6274c7"
 workers_dev = true
 route = ""
 zone_id = ""
+
+[
+vars
+]
+# Development variables here
+# CLIENT_ID = "your-dev-client-id"
+
+# Production secrets should be set in the Cloudflare dashboard
+# [secrets]
+# CLIENT_ID
+# CLIENT_SECRET
